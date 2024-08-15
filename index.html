@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <style>
     .bg-brand-blue {
-      background-color: #1d4ed8;
+      background-color: red;
     }
     .bg-brand-red {
       background-color: #ef4444;
@@ -38,8 +38,10 @@
       <nav>
         <ul class="flex space-x-6">
           <li><a href="#features" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown">Features</a></li>
-          <li><a href="#download" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Download</a></li>
-          <li><a href="#contact" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">Contact</a></li>
+          <li><a href="#testimonials" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Testimonials</a></li>
+          <li><a href="#download" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">Download</a></li>
+          <li><a href="#free-ebook" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.6s">Free eBook</a></li>
+          <li><a href="#contact" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.8s">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -50,8 +52,8 @@
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-4 wow animate__animated animate__fadeInUp" id="typewriter"></h2>
       <p class="text-lg mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Download YouTube videos, audio, transcripts, and thumbnails effortlessly with our comprehensive toolkit.</p>
-      <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-        <i class="fab fa-windows"></i> Download
+      <a href="#download" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+        <i class="fab fa-windows"></i> Download Now
       </a>
     </div>
     <div class="container mx-auto mt-12">
@@ -88,6 +90,27 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold text-gray-800 mb-12 wow animate__animated animate__fadeInUp">What Our Users Say</h3>
+      <div class="owl-carousel testimonial-carousel owl-theme">
+        <div class="item bg-white p-6 rounded-lg">
+          <p class="text-gray-600 mb-4">"Mensah YouTube Toolkit has revolutionized the way I create content. It's an indispensable tool for any serious YouTuber!"</p>
+          <p class="font-bold text-brand-blue">- Sarah J., Content Creator</p>
+        </div>
+        <div class="item bg-white p-6 rounded-lg">
+          <p class="text-gray-600 mb-4">"The ability to easily download transcripts has saved me countless hours in my video production process. Highly recommended!"</p>
+          <p class="font-bold text-brand-blue">- Mike T., Video Producer</p>
+        </div>
+        <div class="item bg-white p-6 rounded-lg">
+          <p class="text-gray-600 mb-4">"As a digital marketer, the thumbnail download feature has been a game-changer for my YouTube SEO strategies. Love this toolkit!"</p>
+          <p class="font-bold text-brand-blue">- Emily R., Digital Marketer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Download Section -->
   <section id="download" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
     <div class="container mx-auto px-4 text-center">
@@ -97,6 +120,20 @@
         <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 flex items-center space-x-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
           <i class="fab fa-windows"></i>
           <span>Download for Windows</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free eBook Section -->
+  <section id="free-ebook" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold text-gray-800 mb-8 wow animate__animated animate__fadeInUp">Get Our Free eBook</h3>
+      <p class="text-lg text-gray-600 mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Learn how to monetize your YouTube content using Mensah YouTube Toolkit</p>
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+        <input type="email" placeholder="Enter your email" class="py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
+        <a href="#" class="bg-brand-blue text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-700 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+          Get Free eBook
         </a>
       </div>
     </div>
@@ -126,7 +163,7 @@
       // Initialize WOW.js
       new WOW().init();
 
-      // Initialize Owl Carousel
+      // Initialize Owl Carousel for hero section
       $(".owl-carousel").owlCarousel({
         items: 1,
         loop: true,
@@ -141,6 +178,26 @@
             items: 2
           },
           1000: {
+            items: 3
+          }
+        }
+      });
+
+      // Initialize Owl Carousel for testimonials
+      $(".testimonial-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
             items: 3
           }
         }
