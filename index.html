@@ -10,49 +10,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <style>
-    .bg-brand-blue {
-      background-color: red;
+    :root {
+      --primary-red: #dc2626;
+      --secondary-red: #b91c1c;
+      --accent-red: #ef4444;
+      --light-red: #fecaca;
+      --dark-red: #7f1d1d;
     }
-    .bg-brand-red {
-      background-color: #ef4444;
+    .bg-primary-red {
+      background-color: var(--primary-red);
     }
-    .text-brand-blue {
-      color: #1d4ed8;
+    .bg-secondary-red {
+      background-color: var(--secondary-red);
     }
-    .text-brand-red {
-      color: #ef4444;
+    .bg-accent-red {
+      background-color: var(--accent-red);
     }
-    .bg-accent {
-      background-color: #fbbf24;
+    .text-primary-red {
+      color: var(--primary-red);
     }
-    .hover\:bg-accent:hover {
-      background-color: #fbbf24;
+    .text-secondary-red {
+      color: var(--secondary-red);
+    }
+    .text-accent-red {
+      color: var(--accent-red);
+    }
+    .hover\:bg-dark-red:hover {
+      background-color: var(--dark-red);
+    }
+    .bg-red-gradient {
+      background: linear-gradient(135deg, var(--primary-red), var(--secondary-red));
+    }
+    .bg-red-radial-gradient {
+      background: radial-gradient(circle, var(--primary-red), var(--secondary-red));
     }
   </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-red-50">
   <!-- Header -->
-  <header class="bg-brand-blue">
+  <header class="bg-red-gradient">
     <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
       <h1 class="text-3xl font-bold text-white mb-4 md:mb-0 wow animate__animated animate__fadeInDown">Mensah YouTube Toolkit</h1>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#features" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown">Features</a></li>
-          <li><a href="#testimonials" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Testimonials</a></li>
-          <li><a href="#download" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">Download</a></li>
-          <li><a href="#free-ebook" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.6s">Free eBook</a></li>
-          <li><a href="#contact" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.8s">Contact</a></li>
+          <li><a href="#features" class="text-white hover:text-light-red wow animate__animated animate__fadeInDown">Features</a></li>
+          <li><a href="#testimonials" class="text-white hover:text-light-red wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Testimonials</a></li>
+          <li><a href="#download" class="text-white hover:text-light-red wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">Download</a></li>
+          <li><a href="#free-ebook" class="text-white hover:text-light-red wow animate__animated animate__fadeInDown" data-wow-delay="0.6s">Free eBook</a></li>
+          <li><a href="#contact" class="text-white hover:text-light-red wow animate__animated animate__fadeInDown" data-wow-delay="0.8s">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+  <section class="bg-red-radial-gradient text-white py-20">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-4 wow animate__animated animate__fadeInUp" id="typewriter"></h2>
       <p class="text-lg mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Download YouTube videos, audio, transcripts, and thumbnails effortlessly with our comprehensive toolkit.</p>
-      <a href="#download" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+      <a href="#download" class="bg-accent-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         <i class="fab fa-windows"></i> Download Now
       </a>
     </div>
@@ -66,58 +82,58 @@
   </section>
 
   <!-- Features Section -->
-  <section id="features" class="py-20">
+  <section id="features" class="py-20 bg-red-50">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold text-gray-800 mb-12 wow animate__animated animate__fadeInUp">Features</h3>
+      <h3 class="text-3xl font-bold text-primary-red mb-12 wow animate__animated animate__fadeInUp">Features</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Videos</h4>
-          <p class="text-gray-600">Easily download YouTube videos in various formats and resolutions.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp">
+          <h4 class="text-2xl font-bold text-secondary-red mb-4">Download Videos</h4>
+          <p class="text-gray-700">Easily download YouTube videos in various formats and resolutions.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Audio</h4>
-          <p class="text-gray-600">Extract and download audio from YouTube videos in high-quality formats.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+          <h4 class="text-2xl font-bold text-secondary-red mb-4">Download Audio</h4>
+          <p class="text-gray-700">Extract and download audio from YouTube videos in high-quality formats.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Transcripts</h4>
-          <p class="text-gray-600">Get transcripts of YouTube videos to assist with content creation and analysis.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+          <h4 class="text-2xl font-bold text-secondary-red mb-4">Download Transcripts</h4>
+          <p class="text-gray-700">Get transcripts of YouTube videos to assist with content creation and analysis.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Thumbnails</h4>
-          <p class="text-gray-600">Save YouTube video thumbnails for use in your own projects or as references.</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+          <h4 class="text-2xl font-bold text-secondary-red mb-4">Download Thumbnails</h4>
+          <p class="text-gray-700">Save YouTube video thumbnails for use in your own projects or as references.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-20 bg-gray-100">
+  <section id="testimonials" class="py-20 bg-red-gradient">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold text-gray-800 mb-12 wow animate__animated animate__fadeInUp">What Our Users Say</h3>
+      <h3 class="text-3xl font-bold text-white mb-12 wow animate__animated animate__fadeInUp">What Our Users Say</h3>
       <div class="owl-carousel testimonial-carousel owl-theme">
         <div class="item bg-white p-6 rounded-lg">
-          <p class="text-gray-600 mb-4">"Mensah YouTube Toolkit has revolutionized the way I create content. It's an indispensable tool for any serious YouTuber!"</p>
-          <p class="font-bold text-brand-blue">- Sarah J., Content Creator</p>
+          <p class="text-gray-700 mb-4">"Mensah YouTube Toolkit has revolutionized the way I create content. It's an indispensable tool for any serious YouTuber!"</p>
+          <p class="font-bold text-primary-red">- Sarah J., Content Creator</p>
         </div>
         <div class="item bg-white p-6 rounded-lg">
-          <p class="text-gray-600 mb-4">"The ability to easily download transcripts has saved me countless hours in my video production process. Highly recommended!"</p>
-          <p class="font-bold text-brand-blue">- Mike T., Video Producer</p>
+          <p class="text-gray-700 mb-4">"The ability to easily download transcripts has saved me countless hours in my video production process. Highly recommended!"</p>
+          <p class="font-bold text-primary-red">- Mike T., Video Producer</p>
         </div>
         <div class="item bg-white p-6 rounded-lg">
-          <p class="text-gray-600 mb-4">"As a digital marketer, the thumbnail download feature has been a game-changer for my YouTube SEO strategies. Love this toolkit!"</p>
-          <p class="font-bold text-brand-blue">- Emily R., Digital Marketer</p>
+          <p class="text-gray-700 mb-4">"As a digital marketer, the thumbnail download feature has been a game-changer for my YouTube SEO strategies. Love this toolkit!"</p>
+          <p class="font-bold text-primary-red">- Emily R., Digital Marketer</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Download Section -->
-  <section id="download" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+  <section id="download" class="bg-red-radial-gradient text-white py-20">
     <div class="container mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold mb-4 wow animate__animated animate__fadeInUp">Download Mensah YouTube Toolkit</h3>
       <p class="text-lg mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Available for Windows. Download now to start managing your YouTube content efficiently!</p>
       <div class="flex justify-center">
-        <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 flex items-center space-x-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+        <a href="download/mensahyoutubetoolkit.exe" class="bg-accent-red text-white py-3 px-6 rounded-full font-semibold hover:bg-dark-red flex items-center space-x-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
           <i class="fab fa-windows"></i>
           <span>Download for Windows</span>
         </a>
@@ -126,13 +142,13 @@
   </section>
 
   <!-- Free eBook Section -->
-  <section id="free-ebook" class="py-20 bg-gray-100">
+  <section id="free-ebook" class="py-20 bg-red-50">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold text-gray-800 mb-8 wow animate__animated animate__fadeInUp">Get Our Free eBook</h3>
-      <p class="text-lg text-gray-600 mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Learn how to monetize your YouTube content using Mensah YouTube Toolkit</p>
+      <h3 class="text-3xl font-bold text-primary-red mb-8 wow animate__animated animate__fadeInUp">Get Our Free eBook</h3>
+      <p class="text-lg text-gray-700 mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Learn how to monetize your YouTube content using Mensah YouTube Toolkit</p>
       <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-        <input type="email" placeholder="Enter your email" class="py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
-        <a href="#" class="bg-brand-blue text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-700 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+        <input type="email" placeholder="Enter your email" class="py-2 px-4 rounded-full border border-red-300 focus:outline-none focus:ring-2 focus:ring-primary-red wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
+        <a href="#" class="bg-primary-red text-white py-2 px-6 rounded-full font-semibold hover:bg-dark-red wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
           Get Free eBook
         </a>
       </div>
@@ -140,15 +156,15 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20">
+  <section id="contact" class="py-20 bg-red-gradient text-white">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold text-gray-800 mb-12 wow animate__animated animate__fadeInUp">Contact Us</h3>
-      <p class="text-lg text-gray-600">For any inquiries or support, reach out to us at <a href="mailto:support@mensahyoutubetoolkit.com" class="text-blue-600 hover:underline">support@mensahyoutubetoolkit.com</a></p>
+      <h3 class="text-3xl font-bold mb-12 wow animate__animated animate__fadeInUp">Contact Us</h3>
+      <p class="text-lg">For any inquiries or support, reach out to us at <a href="mailto:support@mensahyoutubetoolkit.com" class="text-light-red hover:underline">support@mensahyoutubetoolkit.com</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-brand-blue text-white py-6">
+  <footer class="bg-dark-red text-white py-6">
     <div class="container mx-auto px-4 text-center">
       <p>&copy; 2024 Mensah YouTube Toolkit. All rights reserved.</p>
     </div>
