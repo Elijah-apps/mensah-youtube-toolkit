@@ -7,10 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <style>
-    .text-shadow {
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    }
     .bg-brand-blue {
       background-color: #1d4ed8;
     }
@@ -29,27 +28,18 @@
     .hover\:bg-accent:hover {
       background-color: #fbbf24;
     }
-    .shadow-lg {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new WOW().init();
-    });
-  </script>
 </head>
 <body class="bg-gray-50">
   <!-- Header -->
-  <header class="bg-brand-blue shadow-lg">
-    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-white text-shadow wow animate__animated animate__fadeInDown">Mensah YouTube Toolkit</h1>
+  <header class="bg-brand-blue">
+    <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-3xl font-bold text-white mb-4 md:mb-0 wow animate__animated animate__fadeInDown">Mensah YouTube Toolkit</h1>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#features" class="text-white hover:text-brand-red text-shadow wow animate__animated animate__fadeInDown">Features</a></li>
-          <li><a href="#download" class="text-white hover:text-brand-red text-shadow wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Download</a></li>
-          <li><a href="#contact" class="text-white hover:text-brand-red text-shadow wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">Contact</a></li>
+          <li><a href="#features" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown">Features</a></li>
+          <li><a href="#download" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.2s">Download</a></li>
+          <li><a href="#contact" class="text-white hover:text-brand-red wow animate__animated animate__fadeInDown" data-wow-delay="0.4s">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -58,33 +48,40 @@
   <!-- Hero Section -->
   <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-4 text-shadow wow animate__animated animate__fadeInUp">Enhance Your YouTube Experience<br>An Open Source Software<br> Written in Python</h2>
-      <p class="text-lg mb-8 text-shadow wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Download YouTube videos, audio, transcripts, and thumbnails effortlessly with our comprehensive toolkit.</p>
-      <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 text-shadow wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+      <h2 class="text-4xl font-bold mb-4 wow animate__animated animate__fadeInUp" id="typewriter"></h2>
+      <p class="text-lg mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Download YouTube videos, audio, transcripts, and thumbnails effortlessly with our comprehensive toolkit.</p>
+      <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         <i class="fab fa-windows"></i> Download
       </a>
+    </div>
+    <div class="container mx-auto mt-12">
+      <div class="owl-carousel owl-theme">
+        <div class="item"><img src="/api/placeholder/800/400" alt="Feature 1" class="mx-auto rounded-lg"></div>
+        <div class="item"><img src="/api/placeholder/800/400" alt="Feature 2" class="mx-auto rounded-lg"></div>
+        <div class="item"><img src="/api/placeholder/800/400" alt="Feature 3" class="mx-auto rounded-lg"></div>
+      </div>
     </div>
   </section>
 
   <!-- Features Section -->
   <section id="features" class="py-20">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold text-gray-800 mb-12 text-shadow wow animate__animated animate__fadeInUp">Features</h3>
+      <h3 class="text-3xl font-bold text-gray-800 mb-12 wow animate__animated animate__fadeInUp">Features</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4 text-shadow">Download Videos</h4>
+        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp">
+          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Videos</h4>
           <p class="text-gray-600">Easily download YouTube videos in various formats and resolutions.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4 text-shadow">Download Audio</h4>
+        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Audio</h4>
           <p class="text-gray-600">Extract and download audio from YouTube videos in high-quality formats.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4 text-shadow">Download Transcripts</h4>
+        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Transcripts</h4>
           <p class="text-gray-600">Get transcripts of YouTube videos to assist with content creation and analysis.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
-          <h4 class="text-2xl font-bold text-brand-blue mb-4 text-shadow">Download Thumbnails</h4>
+        <div class="bg-white p-6 rounded-lg wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+          <h4 class="text-2xl font-bold text-brand-blue mb-4">Download Thumbnails</h4>
           <p class="text-gray-600">Save YouTube video thumbnails for use in your own projects or as references.</p>
         </div>
       </div>
@@ -94,10 +91,10 @@
   <!-- Download Section -->
   <section id="download" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold mb-4 text-shadow wow animate__animated animate__fadeInUp">Download Mensah YouTube Toolkit</h3>
-      <p class="text-lg mb-8 text-shadow wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Available for Windows. Download now to start managing your YouTube content efficiently!</p>
+      <h3 class="text-3xl font-bold mb-4 wow animate__animated animate__fadeInUp">Download Mensah YouTube Toolkit</h3>
+      <p class="text-lg mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Available for Windows. Download now to start managing your YouTube content efficiently!</p>
       <div class="flex justify-center">
-        <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 flex items-center space-x-2 text-shadow wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+        <a href="download/mensahyoutubetoolkit.exe" class="bg-brand-red text-white py-3 px-6 rounded-full font-semibold hover:bg-red-600 flex items-center space-x-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
           <i class="fab fa-windows"></i>
           <span>Download for Windows</span>
         </a>
@@ -108,7 +105,7 @@
   <!-- Contact Section -->
   <section id="contact" class="py-20">
     <div class="container mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold text-gray-800 mb-12 text-shadow wow animate__animated animate__fadeInUp">Contact Us</h3>
+      <h3 class="text-3xl font-bold text-gray-800 mb-12 wow animate__animated animate__fadeInUp">Contact Us</h3>
       <p class="text-lg text-gray-600">For any inquiries or support, reach out to us at <a href="mailto:support@mensahyoutubetoolkit.com" class="text-blue-600 hover:underline">support@mensahyoutubetoolkit.com</a></p>
     </div>
   </section>
@@ -116,8 +113,46 @@
   <!-- Footer -->
   <footer class="bg-brand-blue text-white py-6">
     <div class="container mx-auto px-4 text-center">
-      <p class="text-shadow">&copy; 2024 Mensah YouTube Toolkit. All rights reserved.</p>
+      <p>&copy; 2024 Mensah YouTube Toolkit. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.19.0/dist/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Initialize WOW.js
+      new WOW().init();
+
+      // Initialize Owl Carousel
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+
+      // Initialize Typewriter
+      new Typewriter('#typewriter', {
+        strings: ['Enhance Your YouTube Experience', 'An Open Source Software', 'Written in Python'],
+        autoStart: true,
+        loop: true,
+      });
+    });
+  </script>
 </body>
 </html>
